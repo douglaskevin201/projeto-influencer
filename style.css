@@ -6,15 +6,17 @@
 }
 
 header{
-    background-image: linear-gradient(#FCB14E, #F4C87E);
-    border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.103);
-    padding: 20px 5%;
-    backdrop-filter: blur(5px);
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    
+    justify-content: space-between;
+    padding: 20px 0.5%;
+    background-color: #d3d2d26c;
+    backdrop-filter: blur(5px);
+    border-radius: 8px;   
+}
+
+div.identidade{
+    text-align: center;
+    padding-top: 0px;
 }
 
 header h1{
@@ -27,25 +29,33 @@ header h1{
 
 header p{
     font-size: 0.8em;
-
     text-align: center;
 }
 
-header ul{
-    display: flex;
-    list-style: none;
-    gap: 10px;
-    margin: 0;
-
-}
-
-header ul li{
-    font-size: 0.9em;
-}
 
 body{
     background-image: linear-gradient(#53B3E6, #4EB1D9, #D3F3FE, #FBF9EC);
     background-attachment: fixed;
+}
+
+.sobre{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    background-color: #d3d2d26c;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.sobre img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
 }
 
 main section{
@@ -67,20 +77,122 @@ main p{
     line-height: 1.6;
 }
 
-.cupom{
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 40px;
-    border-radius: 20px;
-    border: 2px dashed #D29D41;
+.life-fotos{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 30px;
 }
 
-.parceria{
-    background-color: rgba(255, 255, 255, 0.3);
-    padding: 40px;
+.life-fotos img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
     border-radius: 10px;
-    background-image: url(imagens-prototipo/definitivo.webp);
-    background-position: center center;
-    background-size: contain;
-    background-attachment: fixed;
-    color: darkblue;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
 }
+
+.life-fotos img:hover{
+    transform: scale(1.05);
+}
+
+.skincare-container{
+    background-color: #d3d2d26c;
+    padding: 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.video-destaque{
+    max-width: 400px;
+    margin: 30px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+    border: 3px solid #fff;
+}
+
+.video-destaque video{
+    width: 100%;
+    display: block;
+}
+
+.fotos-produtos{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+
+}
+
+.fotos-produtos img{
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.fotos-produtos img:hover{
+    transform: scale(1.05);
+}
+
+li.contato-wpp{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+li.contato-wpp a{
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+li.email {
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    
+}
+li.email a{
+    text-decoration: none;
+    color: black;
+}
+
+
+li.instagram{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    list-style: none;
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+
+li.instagram a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.insta-icon{
+    font-size: 24px;
+    margin-right: 10px;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline block;
+}
+
