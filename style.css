@@ -14,28 +14,38 @@ header{
     border-radius: 8px;   
 }
 
-div.identidade{
-    text-align: center;
-    padding-top: 0px;
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
 
 header h1{
-    letter-spacing: 7px;
+    letter-spacing: 10px;
     font-size: 2em;
     text-decoration: underline;
     margin: 0;
     text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
 header p{
     font-size: 0.8em;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+    color: #666;
 }
 
 
 body{
     background-image: linear-gradient(#53B3E6, #4EB1D9, #D3F3FE, #FBF9EC);
     background-attachment: fixed;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
 
 .sobre{
@@ -69,12 +79,19 @@ main h2{
     color: #333;
     text-transform: uppercase;
     letter-spacing: 8px;
+    font-weight: 500;
+    letter-spacing: 6px;
 }
 
 main p{
     max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    color: #444;
+    line-height: 1.8;
+    font-weight: 400;
+    margin-bottom: 1.5em;
+    text-align: center;
 }
 
 .life-fotos{
@@ -141,9 +158,19 @@ main p{
     transform: scale(1.05);
 }
 
+footer ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    
+}
+
 li.contato-wpp{
     list-style: none;
-    display: flex;
+    display: inline-block;
     align-items: center;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -152,8 +179,14 @@ li.contato-wpp{
 li.contato-wpp a{
     text-decoration: none;
     color: #333;
-    display: flex;
+    display: inline-block;
     align-items: center;
+    transition: transform 0.3s ease;
+}
+
+li.contato-wpp a:hover{
+    transform: scale(1.1);
+
 }
 
 li.email {
@@ -161,13 +194,23 @@ li.email {
     padding-top: 10px;
     padding-bottom: 10px;
     list-style: none;
-    display: flex;
+    display: inline-block;
     align-items: center;
-    
+    transition: transform 0.3s ease;
 }
+
+li.email a:hover{
+    transform: scale(1.1);
+
+}
+
+
 li.email a{
     text-decoration: none;
-    color: black;
+    color: #333;
+    display: inline-block;
+    align-items: center;
+    transition: transform 0.3s ease;
 }
 
 
@@ -176,23 +219,127 @@ li.instagram{
     padding-top: 10px;
     list-style: none;
     list-style: none;
-    display: flex;
+    display: inline-block;
     align-items: center;
-
 }
+
+
 
 li.instagram a{
     text-decoration: none;
     color: black;
+    display: inline-block;
+    align-items: center;
+    transition: transform 0.3s ease;
 
 }
 
+li.instagram a:hover{
+    transform: scale(1.1);
+}
+
 .insta-icon{
-    font-size: 24px;
+    font-size: 26px;
     margin-right: 10px;
     background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: inline block;
+    display: inline-block;
 }
 
+li.contato-wpp a, li.email a, li.instagram a{
+    background: rgba(255, 255, 255, 0.4);
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+li.contato-wpp a:hover{
+    background: #25d36622;
+    border-color: #25d366;
+}
+
+footer{
+    padding: 20px 0.5%;
+    background-color: #d3d2d26c;
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+}
+
+footer h2{
+    letter-spacing: 5px;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+
+}
+
+
+.kevin{
+    text-align: center;
+    font-size: 0.9em;
+    letter-spacing: 1.5px;
+    color: black;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-radius: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.kevin a{
+    display: inline-block;
+    text-decoration: underline;
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+.kevin a:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    
+    header h1{
+        font-size: 1.5em;
+        letter-spacing: 3px;
+
+    }
+
+    main section{
+        padding: 40px 5%;
+    }
+
+    .sobre{
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .sobre img{
+        width: 280px;
+        height: 180px;
+    }
+
+    .life-fotos img, .fotos-produtos img{
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    footer ul{
+        align-items: stretch;
+    }
+
+    li.contato-wpp a, li.email a, li.instagram a{
+        justify-content: center;
+        font-size: 0.9em;
+    }
+
+    footer h2{
+        font-size: 1.5em;
+        letter-spacing: 5px;
+    }
+
+}
